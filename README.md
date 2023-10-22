@@ -1,0 +1,1 @@
+# os_qr_code_generator_trp
