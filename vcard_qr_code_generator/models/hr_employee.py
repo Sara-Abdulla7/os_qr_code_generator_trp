@@ -36,9 +36,6 @@ class HrQrGenerator(models.Model):
             o.type_param = "work"
             o.value = rec.work_phone or ''
 
-            # o = card.add('tel')
-            # o.type_param = "home"
-            # o.value = '+49 181 99 00 00 00'
 
             o = card.add('org')
             o.value = rec.env.user.company_id.name or ''

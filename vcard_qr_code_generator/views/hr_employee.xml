@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="hr_qr" model="ir.ui.view">
-        <field name="name">hr.employee.qr</field>
+    <record id="hr_employee_form_view_vcard_qr_code_generator" model="ir.ui.view">
+        <field name="name">hr_employee_form_view_vcard_qr_code_generator</field>
         <field name="model">hr.employee</field>
         <field name="type">form</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
@@ -11,9 +11,15 @@
             </xpath>
             <page name="hr_settings" position="after">
                 <page name="qr_code" string="QR Code">
-                    <field name="qr_code" widget="image" />
+                    <group>
+                        <field name="qr_code" widget="image" class="oe_avatar" options='{"zoom": true}' />
+                        <field name="qr_code" string="Download QR Code"/>
+                    </group>
                 </page>
             </page>
+
+
+
         </field>
     </record>
 </odoo>
